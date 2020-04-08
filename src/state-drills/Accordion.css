@@ -1,0 +1,12 @@
+li button {
+	padding: 0.5rem;
+	background-color: blue;
+	color: #fff;
+	font-size: 1rem;
+	margin: 0.5rem;
+}
+
+li p {
+	padding: 2rem;
+	background-color: bisque;
+}

@@ -1,30 +1,32 @@
 import React from 'react';
+import './Accordion.css';
 
 class Accordion extends React.Component {
 	state = {
-        content: '',
-        indexClick: null
-    };
-    
-    static defaultProps={
-        sections : []
-    }
+		content: '',
+		indexClick: null,
+	};
+
+	static defaultProps = {
+		sections: [],
+	};
 
 	handleDisplay() {
 		return this.props.sections.map((e, index) => {
 			return (
 				<li key={index}>
-					<button key={index}
+					<button
+						key={index}
 						onClick={() => {
-							return this.setState({ 
-                                content: e.content,
-                                indexClick: index
-                            });
+							return this.setState({
+								content: e.content,
+								indexClick: index,
+							});
 						}}
 					>
 						{e.title}
 					</button>
-                    {(this.state.indexClick=== index)&&<p>{this.state.content}</p>}
+					{this.state.indexClick === index && <p>{this.state.content}</p>}
 				</li>
 			);
 		});
@@ -33,9 +35,7 @@ class Accordion extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul>
-                    {this.handleDisplay()}
-                </ul>
+				<ul>{this.handleDisplay()}</ul>
 			</div>
 		);
 	}
