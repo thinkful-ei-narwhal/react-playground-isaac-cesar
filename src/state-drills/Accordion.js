@@ -2,7 +2,8 @@ import React from 'react';
 
 class Accordion extends React.Component {
 	state = {
-		content: '',
+        content: '',
+        indexClick: null
 	};
 
 	handleDisplay() {
@@ -11,11 +12,15 @@ class Accordion extends React.Component {
 				<li key={index}>
 					<button
 						onClick={() => {
-							return this.setState({ content: e.content });
+							return this.setState({ 
+                                content: e.content,
+                                indexClick: index
+                            });
 						}}
 					>
 						{e.title}
 					</button>
+                    {(this.state.indexClick=== index)&&<p>{this.state.content}</p>}
 				</li>
 			);
 		});
@@ -24,8 +29,9 @@ class Accordion extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul>{this.handleDisplay()}</ul>
-				<p>{this.state.content}</p>
+				<ul>
+                    {this.handleDisplay()}
+                </ul>
 			</div>
 		);
 	}
