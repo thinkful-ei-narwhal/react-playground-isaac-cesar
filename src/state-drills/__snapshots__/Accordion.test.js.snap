@@ -6,14 +6,36 @@ exports[`accordion renders empty  when section props null 1`] = `
 </div>
 `;
 
-exports[`accordion renders empty li when section props null 1`] = `
+exports[`accordion renders empty ul when section props null 1`] = `
 <div>
   <ul />
 </div>
 `;
 
-exports[`accordion renders empty ul when section props null 1`] = `
+exports[`accordion renders no sections as active by default 1`] = `
 <div>
-  <ul />
+  <ul>
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+  </ul>
 </div>
 `;
