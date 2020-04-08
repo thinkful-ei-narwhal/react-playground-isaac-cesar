@@ -4,7 +4,11 @@ class Accordion extends React.Component {
 	state = {
         content: '',
         indexClick: null
-	};
+    };
+    
+    static defaultProps={
+        content: {}
+    }
 
 	handleDisplay() {
 		return this.props.sections.map((e, index) => {
