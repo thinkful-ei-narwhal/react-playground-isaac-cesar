@@ -4,9 +4,9 @@ import Accordion from'./Accordion'
 
 describe('accordion',()=>{
 
-    it('renders empty li when section props null',() =>{
+    it('renders empty ul when section props null',() =>{
         expect(
-            renderer.create(<Accordion/>).toJSON()
+            renderer.create(<Accordion />).toJSON()
             ).toMatchSnapshot()
     })
 })

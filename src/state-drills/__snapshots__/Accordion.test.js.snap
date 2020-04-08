@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accordion renders empty  when section props null 1`] = `
+<div>
+  <ul />
+</div>
+`;
+
+exports[`accordion renders empty li when section props null 1`] = `
+<div>
+  <ul />
+</div>
+`;
+
+exports[`accordion renders empty ul when section props null 1`] = `
+<div>
+  <ul />
+</div>
+`;

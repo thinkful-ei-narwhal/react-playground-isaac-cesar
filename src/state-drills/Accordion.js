@@ -7,7 +7,7 @@ class Accordion extends React.Component {
     };
     
     static defaultProps={
-        content: {}
+        sections : []
     }
 
 	handleDisplay() {
